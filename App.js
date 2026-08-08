@@ -133,8 +133,8 @@ const styles = StyleSheet.create({
     alignItems: 'center', justifyContent: 'center',
   },
   headerLogoText: { fontSize: 18 },
-  headerTitle: { fontSize: 19, fontWeight: '800', color: colors.white, letterSpacing: -0.3 },
-  headerSubtitle: { fontSize: 12, color: colors.gray400, marginTop: 1 },
+  headerTitle: { fontSize: 19, fontWeight: '800', color: colors.white, letterSpacing: -0.3, textAlign: 'left' },
+  headerSubtitle: { fontSize: 12, color: colors.gray400, marginTop: 1, textAlign: 'left' },
 
   tabBar: {
     backgroundColor: colors.white,
