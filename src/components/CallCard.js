@@ -59,7 +59,7 @@ export default function CallCard({ call, onClose, onDelete, onViewPhoto }) {
             <Text style={styles.closeBtnText}>Close with Photo</Text>
           </TouchableOpacity>
         )}
-        {onDelete && (
+        {onDelete && call.status === 'closed' && (
           <TouchableOpacity style={styles.deleteBtn} onPress={() => onDelete(call.id)} activeOpacity={0.7}>
             <Ionicons name="trash-outline" size={16} color={colors.gray400} />
           </TouchableOpacity>
