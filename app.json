@@ -11,7 +11,9 @@
       "resizeMode": "contain",
       "backgroundColor": "#0F1B2D"
     },
-    "assetBundlePatterns": ["**/*"],
+    "assetBundlePatterns": [
+      "**/*"
+    ],
     "ios": {
       "supportsTablet": false,
       "bundleIdentifier": "com.yourcompany.cleantrack",
@@ -30,7 +32,8 @@
       "permissions": [
         "android.permission.CAMERA",
         "android.permission.READ_EXTERNAL_STORAGE",
-        "android.permission.WRITE_EXTERNAL_STORAGE"
+        "android.permission.WRITE_EXTERNAL_STORAGE",
+        "android.permission.RECORD_AUDIO"
       ]
     },
     "plugins": [
@@ -40,7 +43,13 @@
           "photosPermission": "CleanTrack needs access to your photos to attach documentation to cleaning calls.",
           "cameraPermission": "CleanTrack needs camera access to photograph completed cleaning jobs."
         }
-      ]
-    ]
+      ],
+      "expo-font"
+    ],
+    "extra": {
+      "eas": {
+        "projectId": "01c40c74-bcb2-43d3-b702-179c1f9b5daf"
+      }
+    }
   }
 }
