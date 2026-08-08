@@ -56,10 +56,9 @@ eas login
 eas build --platform all
 ```
 
-Update `app.json` before publishing:
-- `ios.bundleIdentifier` → e.g. `com.yourcompany.cleantrack`
-- `android.package` → e.g. `com.yourcompany.cleantrack`
+## 📸 Screenshots
 
-## Notes
+| Active calls | History | create a call |
+|---|---|---|
+| <img src="screenshots/Active_call.jpeg" width="260" alt="Active calls"> | <img src="screenshots/History.jpeg" width="260" alt="History"> | <img src="screenshots/Create_call.jpeg" width="260" alt="create a call"> |
 
-- `assets/icon.png`, `assets/adaptive-icon.png`, and `assets/splash.png` are placeholders — swap in your own branding before publishing.
