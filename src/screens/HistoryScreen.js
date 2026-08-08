@@ -105,9 +105,11 @@ export default function HistoryScreen({ calls, onUpdateCalls }) {
                   </Text>
                 </View>
 
-                <TouchableOpacity style={styles.rowDelete} onPress={() => confirmDelete(call.id)}>
-                  <Ionicons name="trash-outline" size={15} color={colors.gray400} />
-                </TouchableOpacity>
+                {call.status === 'closed' && (
+                  <TouchableOpacity style={styles.rowDelete} onPress={() => confirmDelete(call.id)}>
+                    <Ionicons name="trash-outline" size={15} color={colors.gray400} />
+                  </TouchableOpacity>
+                )}
               </View>
             ))}
           </View>
