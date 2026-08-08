@@ -1,0 +1,46 @@
+{
+  "expo": {
+    "name": "CleanTrack",
+    "slug": "cleantrack",
+    "version": "1.0.0",
+    "orientation": "portrait",
+    "icon": "./assets/icon.png",
+    "userInterfaceStyle": "light",
+    "splash": {
+      "image": "./assets/splash.png",
+      "resizeMode": "contain",
+      "backgroundColor": "#0F1B2D"
+    },
+    "assetBundlePatterns": ["**/*"],
+    "ios": {
+      "supportsTablet": false,
+      "bundleIdentifier": "com.yourcompany.cleantrack",
+      "infoPlist": {
+        "NSCameraUsageDescription": "CleanTrack needs camera access to photograph completed cleaning jobs as proof of work.",
+        "NSPhotoLibraryUsageDescription": "CleanTrack needs photo library access to attach documentation photos to cleaning calls.",
+        "NSPhotoLibraryAddUsageDescription": "CleanTrack needs to save photos to your library."
+      }
+    },
+    "android": {
+      "adaptiveIcon": {
+        "foregroundImage": "./assets/adaptive-icon.png",
+        "backgroundColor": "#0F1B2D"
+      },
+      "package": "com.yourcompany.cleantrack",
+      "permissions": [
+        "android.permission.CAMERA",
+        "android.permission.READ_EXTERNAL_STORAGE",
+        "android.permission.WRITE_EXTERNAL_STORAGE"
+      ]
+    },
+    "plugins": [
+      [
+        "expo-image-picker",
+        {
+          "photosPermission": "CleanTrack needs access to your photos to attach documentation to cleaning calls.",
+          "cameraPermission": "CleanTrack needs camera access to photograph completed cleaning jobs."
+        }
+      ]
+    ]
+  }
+}
