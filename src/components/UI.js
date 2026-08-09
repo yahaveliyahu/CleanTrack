@@ -1,5 +1,5 @@
 import React from 'react';
-import { View, Text, TouchableOpacity, StyleSheet } from 'react-native';
+import { View, Text, TouchableOpacity, StyleSheet, I18nManager } from 'react-native';
 import { colors, radius, typography, spacing } from '../utils/theme';
 
 // ─── Status Pill ──────────────────────────────────────────────────────────────
@@ -128,9 +128,8 @@ const styles = StyleSheet.create({
   chipTextActive: { color: colors.white },
 
   sectionHeader: {
-    flexDirection: 'row', alignItems: 'center', justifyContent: 'space-between',
+    flexDirection: I18nManager.isRTL ? 'row-reverse' : 'row', alignItems: 'center', justifyContent: 'space-between',
     marginBottom: spacing.sm, marginTop: spacing.sm,
-    direction: 'ltr',
   },
   sectionTitle: { ...typography.h3, color: colors.gray800, textAlign: 'left' },
   badge: { paddingHorizontal: 10, paddingVertical: 3, borderRadius: radius.full },
