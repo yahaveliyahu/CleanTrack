@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import {
   View, Text, TextInput, StyleSheet, Modal, TouchableOpacity,
-  KeyboardAvoidingView, Platform, ScrollView,
+  KeyboardAvoidingView, Platform, ScrollView, I18nManager,
 } from 'react-native';
 import { Ionicons } from '@expo/vector-icons';
 import { colors, radius, spacing } from '../utils/theme';
@@ -111,9 +111,8 @@ const styles = StyleSheet.create({
     alignSelf: 'center', marginBottom: spacing.xl,
   },
   header: {
-    flexDirection: 'row', alignItems: 'center',
+    flexDirection: I18nManager.isRTL ? 'row-reverse' : 'row', alignItems: 'center',
     justifyContent: 'space-between', marginBottom: spacing.xl,
-    direction: 'ltr',
   },
   title: { fontSize: 22, fontWeight: '800', color: colors.gray800, letterSpacing: -0.4 },
   closeBtn: {
