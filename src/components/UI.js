@@ -130,6 +130,7 @@ const styles = StyleSheet.create({
   sectionHeader: {
     flexDirection: 'row', alignItems: 'center', justifyContent: 'space-between',
     marginBottom: spacing.sm, marginTop: spacing.sm,
+    direction: 'ltr',
   },
   sectionTitle: { ...typography.h3, color: colors.gray800, textAlign: 'left' },
   badge: { paddingHorizontal: 10, paddingVertical: 3, borderRadius: radius.full },
