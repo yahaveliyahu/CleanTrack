@@ -125,6 +125,7 @@ const styles = StyleSheet.create({
     paddingHorizontal: 20,
     paddingTop: Platform.OS === 'android' ? 46 : 54,
     paddingBottom: 16,
+    direction: 'ltr',
   },
   headerBrand: { flexDirection: 'row', alignItems: 'center', gap: 12 },
   headerLogo: {
