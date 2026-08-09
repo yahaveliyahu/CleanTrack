@@ -18,12 +18,12 @@ function Header({ title, subtitle }) {
   return (
     <View style={styles.header}>
       <View style={styles.headerBrand}>
-        <View style={styles.headerLogo}>
-          <Text style={styles.headerLogoText}>🧹</Text>
-        </View>
         <View>
           <Text style={styles.headerTitle}>{title}</Text>
           {subtitle && <Text style={styles.headerSubtitle}>{subtitle}</Text>}
+        </View>
+        <View style={styles.headerLogo}>
+          <Text style={styles.headerLogoText}>🧹</Text>
         </View>
       </View>
     </View>
@@ -126,7 +126,7 @@ const styles = StyleSheet.create({
     paddingTop: Platform.OS === 'android' ? 46 : 54,
     paddingBottom: 16,
   },
-  headerBrand: { flexDirection: I18nManager.isRTL ? 'row-reverse' : 'row', alignItems: 'center', gap: 12 },
+  headerBrand: { flexDirection: I18nManager.isRTL ? 'row-reverse' : 'row', alignItems: 'center', justifyContent: 'space-between' },
   headerLogo: {
     width: 38, height: 38, borderRadius: 12,
     backgroundColor: colors.navyLight,
