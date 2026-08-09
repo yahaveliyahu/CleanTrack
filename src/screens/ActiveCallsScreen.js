@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import {
   View, Text, ScrollView, TouchableOpacity, StyleSheet,
-  Modal, Image, SafeAreaView, StatusBar,
+  Modal, Image, SafeAreaView, StatusBar, Alert,
 } from 'react-native';
 import { Ionicons } from '@expo/vector-icons';
 import { colors, radius, spacing } from '../utils/theme';
@@ -44,7 +44,10 @@ export default function ActiveCallsScreen({ calls, onUpdateCalls }) {
   }
 
   function handleDelete(id) {
-    onUpdateCalls(calls.filter(c => c.id !== id));
+    Alert.alert('Delete Record', 'Remove this call from history?', [
+      { text: 'Cancel', style: 'cancel' },
+      { text: 'Delete', style: 'destructive', onPress: () => onUpdateCalls(calls.filter(c => c.id !== id)) },
+    ]);
   }
 
   return (
