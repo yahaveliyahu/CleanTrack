@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import {
   View, Text, TextInput, StyleSheet, Modal, TouchableOpacity,
-  Image, Alert, KeyboardAvoidingView, Platform, ScrollView, ActivityIndicator,
+  Image, Alert, KeyboardAvoidingView, Platform, ScrollView, ActivityIndicator, I18nManager,
 } from 'react-native';
 import * as ImagePicker from 'expo-image-picker';
 import { Ionicons } from '@expo/vector-icons';
@@ -158,9 +158,8 @@ const styles = StyleSheet.create({
     alignSelf: 'center', marginBottom: spacing.xl,
   },
   header: {
-    flexDirection: 'row', alignItems: 'center',
+    flexDirection: I18nManager.isRTL ? 'row-reverse' : 'row', alignItems: 'center',
     justifyContent: 'space-between', marginBottom: spacing.xl,
-    direction: 'ltr',
   },
   title: { fontSize: 22, fontWeight: '800', color: colors.gray800, letterSpacing: -0.4 },
   closeBtn: {
