@@ -1,5 +1,5 @@
 import React, { useState, useEffect, useCallback } from 'react';
-import { View, Text, StyleSheet, Platform } from 'react-native';
+import { View, Text, StyleSheet, Platform, I18nManager } from 'react-native';
 import { NavigationContainer } from '@react-navigation/native';
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
 import { SafeAreaProvider } from 'react-native-safe-area-context';
@@ -125,9 +125,8 @@ const styles = StyleSheet.create({
     paddingHorizontal: 20,
     paddingTop: Platform.OS === 'android' ? 46 : 54,
     paddingBottom: 16,
-    direction: 'ltr',
   },
-  headerBrand: { flexDirection: 'row', alignItems: 'center', gap: 12 },
+  headerBrand: { flexDirection: I18nManager.isRTL ? 'row-reverse' : 'row', alignItems: 'center', gap: 12 },
   headerLogo: {
     width: 38, height: 38, borderRadius: 12,
     backgroundColor: colors.navyLight,
