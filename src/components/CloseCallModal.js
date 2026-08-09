@@ -160,6 +160,7 @@ const styles = StyleSheet.create({
   header: {
     flexDirection: 'row', alignItems: 'center',
     justifyContent: 'space-between', marginBottom: spacing.xl,
+    direction: 'ltr',
   },
   title: { fontSize: 22, fontWeight: '800', color: colors.gray800, letterSpacing: -0.4 },
   closeBtn: {
