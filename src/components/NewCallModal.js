@@ -22,7 +22,7 @@ export default function NewCallModal({ visible, onClose, onCreate }) {
   }
 
   function handleSubmit() {
-    if (!form.title.trim()) return;
+    if (!form.title.trim() || !form.location.trim() || !form.reporter.trim()) return;
     onCreate({
       title: form.title.trim(),
       location: form.location.trim(),
@@ -93,7 +93,7 @@ export default function NewCallModal({ visible, onClose, onCreate }) {
             />
           </View>
 
-          <PrimaryButton title="Open Call" onPress={handleSubmit} disabled={!form.title.trim()} />
+          <PrimaryButton title="Open Call" onPress={handleSubmit} disabled={!form.title.trim() || !form.location.trim() || !form.reporter.trim()} />
           <SecondaryButton title="Cancel" onPress={handleClose} />
           <View style={{ height: 40 }} />
         </ScrollView>
@@ -113,6 +113,7 @@ const styles = StyleSheet.create({
   header: {
     flexDirection: 'row', alignItems: 'center',
     justifyContent: 'space-between', marginBottom: spacing.xl,
+    direction: 'ltr',
   },
   title: { fontSize: 22, fontWeight: '800', color: colors.gray800, letterSpacing: -0.4 },
   closeBtn: {
